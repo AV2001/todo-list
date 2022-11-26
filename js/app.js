@@ -40,5 +40,27 @@ const addTodo = event => {
     todoInput.value = '';
 };
 
+const deleteCheck = event => {
+    const item = event.target;
+
+    // delete todo
+    if (item.classList[0] === 'delete-btn') {
+        const todo = item.parentElement;
+
+        // animation
+        todo.classList.add('fall');
+        todo.addEventListener('transitionend', () => {
+            todo.remove();
+        });
+    }
+
+    //check mark
+    if (item.classList[0] === 'check-btn') {
+        const todo = item.parentElement;
+        todo.classList.toggle('checked');
+    }
+};
+
 // EVENT LISTENERS
 todoButton.addEventListener('click', addTodo);
+todoList.addEventListener('click', deleteCheck);
