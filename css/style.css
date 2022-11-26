@@ -25,6 +25,7 @@ form {
 
 form input,
 form button {
+    font-family: inherit;
     border: none;
     background-color: #fff;
     font-size: 2rem;
@@ -41,4 +42,50 @@ form button {
 form button:hover {
     background-color: #d88771;
     color: #fff;
+}
+
+.todo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.check-btn,
+.delete-btn {
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.check-btn {
+    background-color: #49cc49;
+}
+
+.delete-btn {
+    background-color: #ff6f47;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
 }
