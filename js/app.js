@@ -30,11 +30,14 @@ const addTodo = event => {
     // add delete button
     const deleteBtn = document.createElement('button');
     deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
-    deleteBtn.classList.add('check-btn');
+    deleteBtn.classList.add('delete-btn');
     todoDiv.append(deleteBtn);
 
     // attach the todo div to the list
     todoList.append(todoDiv);
+
+    // clear todo input value
+    todoInput.value = '';
 };
 
 // EVENT LISTENERS
